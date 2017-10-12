@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'NPFramework_Example' do
+  pod 'NPFramework', :path => '../'
+
+  target 'NPFramework_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

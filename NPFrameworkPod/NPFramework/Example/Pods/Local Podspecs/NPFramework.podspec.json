@@ -1,0 +1,22 @@
+{
+  "name": "NPFramework",
+  "version": "0.1.0",
+  "summary": "A short description of NPFramework.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Robert Steiner/NPFramework",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Robert Steiner": "brogrammerrob@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Robert Steiner/NPFramework.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "NPFramework/Classes/**/*"
+}

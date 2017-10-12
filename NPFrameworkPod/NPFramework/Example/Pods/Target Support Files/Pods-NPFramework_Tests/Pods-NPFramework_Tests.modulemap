@@ -1,0 +1,6 @@
+framework module Pods_NPFramework_Tests {
+  umbrella header "Pods-NPFramework_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
