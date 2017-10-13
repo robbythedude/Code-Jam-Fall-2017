@@ -12,12 +12,20 @@ enum DeviceEvent {
 }
 
 enum DeviceState {
-    case yes  //temp
+    case On
+    case Off
+    case Opened
+    case Closed
+}
+
+enum DeviceType {
+    case Outlet
+    case Alarm
+    case MultiPurpose
 }
 
 protocol NPFrameWorkProtocol {
-    func getAllDevices(policyNumber: Int, completionBlock: @escaping ([String]?) -> Void)
-    func getDevicState(deviceID: String) -> DeviceState
+    func getAllDevices(policyNumber: Int, completionBlock: @escaping ([(String, DeviceState, DeviceType)]?) -> Void)
     func getDeviceEvents(deviceID: String) -> [DeviceEvent]
 }
 
@@ -29,12 +37,12 @@ class NPFrameWork : NPFrameWorkProtocol {
     
     init (){}
     
-    func getAllDevices(policyNumber: Int, completionBlock: @escaping ([String]?) -> Void){
+    func getAllDevices(policyNumber: Int, completionBlock: @escaping ([(String, DeviceState, DeviceType)]?) -> Void){
         var builtURL = NPFrameWork.sharedInstance.endPointURL + policyNumber.description + "/devices"
         makeGetCall(builtURL: builtURL){
             (output) in
             
-            var collectionOfNames: [String] = []
+            var collectionOfNames: [(String, DeviceState, DeviceType)] = []
             
             guard output != nil else {
                 completionBlock(nil)
@@ -44,14 +52,39 @@ class NPFrameWork : NPFrameWorkProtocol {
             if let array = output as? [Any]{
                 for obj in array {
                     var name = (obj as AnyObject)["name"] as! String
-                    collectionOfNames.append(name)
+                    var status = (obj as AnyObject)["status"] as! String
+                    
+                    var state: DeviceState
+                    switch status {
+                    case "off":
+                        state = DeviceState.Off
+                    case "on":
+                        state = DeviceState.On
+                    case "opened":
+                        state = DeviceState.Opened
+                    case "closed":
+                        state = DeviceState.Closed
+                    default:
+                        return
+                    }
+                    
+                    var type: DeviceType
+                    switch name {
+                    case "Multipurpose Sensor":
+                        type = DeviceType.MultiPurpose
+                    case "FortrezZ Siren Strobe Alarm":
+                        type = DeviceType.Alarm
+                    case "Outlet":
+                        type = DeviceType.Outlet
+                    default:
+                        return
+                    }
+                    
+                    collectionOfNames.append((name, state, type))
                 }
                 completionBlock(collectionOfNames)
             }
         }
-    }
-    func getDevicState(deviceID: String) -> DeviceState {
-        return DeviceState.yes
     }
     func getDeviceEvents(deviceID: String) -> [DeviceEvent] {
         return [DeviceEvent.yes]
@@ -95,7 +128,6 @@ class NPFrameWork : NPFrameWorkProtocol {
                     completionBlock(nil)
                     return
                 }
-                print(jsonOBJ1)
                 completionBlock(jsonOBJ1)
                 
             } catch  {

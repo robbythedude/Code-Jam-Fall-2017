@@ -2,6 +2,8 @@ import UIKit
 import XCTest
 import NPFramework
 
+import NPFramework
+
 class Tests: XCTestCase {
     
     override func setUp() {
