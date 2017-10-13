@@ -15,6 +15,7 @@
 		D629C2481F90F0D500206DD3 /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D629C2471F90F0D500206DD3 /* DeviceTableViewCell.swift */; };
 		D629C24A1F9103BF00206DD3 /* DeviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D629C2491F9103BF00206DD3 /* DeviceTableViewController.swift */; };
 		D629C24C1F91055900206DD3 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = D629C24B1F91055900206DD3 /* Device.swift */; };
+		D6520FD41F91212600A22506 /* NPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6520FD31F91212600A22506 /* NPService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D629C2471F90F0D500206DD3 /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
 		D629C2491F9103BF00206DD3 /* DeviceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableViewController.swift; sourceTree = "<group>"; };
 		D629C24B1F91055900206DD3 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		D6520FD31F91212600A22506 /* NPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				D629C2471F90F0D500206DD3 /* DeviceTableViewCell.swift */,
 				D629C2371F9001CF00206DD3 /* Main.storyboard */,
 				D629C2491F9103BF00206DD3 /* DeviceTableViewController.swift */,
+				D6520FD31F91212600A22506 /* NPService.swift */,
 				D629C24B1F91055900206DD3 /* Device.swift */,
 				D629C23A1F9001CF00206DD3 /* Assets.xcassets */,
 				D629C23C1F9001CF00206DD3 /* LaunchScreen.storyboard */,
@@ -148,6 +151,7 @@
 				D629C2361F9001CF00206DD3 /* ViewController.swift in Sources */,
 				D629C24A1F9103BF00206DD3 /* DeviceTableViewController.swift in Sources */,
 				D629C2481F90F0D500206DD3 /* DeviceTableViewCell.swift in Sources */,
+				D6520FD41F91212600A22506 /* NPService.swift in Sources */,
 				D629C2341F9001CF00206DD3 /* AppDelegate.swift in Sources */,
 				D629C24C1F91055900206DD3 /* Device.swift in Sources */,
 			);

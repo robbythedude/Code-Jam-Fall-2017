@@ -103,11 +103,32 @@ class DeviceTableViewController: UITableViewController {
     
     private func loadDevices() {
         let photo1 = UIImage(named: "alarm")
+        let photo2 = UIImage(named: "sensor")
+        let photo3 = UIImage(named: "outlet")
         
-        let device1 = Device("Smoke Alarm", photo1!)
-        let device2 = Device("Camera", photo1!)
-        
-        devices += [device1, device2]
+        NPFrameWork.sharedInstance.getAllDevices(policyNumber: 999999999) {(output) in
+            if let listOfDevices = output {
+                for device in listOfDevices {
+                    var name = device.0
+                    var dev: Device
+                    switch device.2 {
+                    case .Alarm:
+                        dev = Device(name, photo1!)
+                    case .MultiPurpose:
+                        dev = Device(name, photo2!)
+                    case .Outlet:
+                        dev = Device(name, photo3!)
+                    default:
+                        return
+                    }
+                    
+                    self.devices.append(dev)
+                }
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        }
         
     }
 
