@@ -1,0 +1,166 @@
+{
+  "events": [
+    {
+      "policyNumber": "999999999",
+      "deviceId": "Outlet",
+      "device": {
+        "device": "Outlet",
+        "status": "off",
+        "eventDate": "10/13/17 4:24:22 PM"
+      }
+    },
+    {
+      "policyNumber": "999999999",
+      "deviceId": "Outlet",
+      "device": {
+        "device": "Outlet",
+        "status": "off",
+        "eventDate": "10/13/17 4:25:37 PM"
+      }
+    },
+    {
+      "policyNumber": "999999999",
+      "deviceId": "Outlet",
+      "device": {
+        "device": "Outlet",
+        "status": "on",
+        "eventDate": "10/13/17 4:25:38 PM"
+      }
+    },
+    {
+      "policyNumber": "999999999",
+      "deviceId": "MultipurposeSensor",
+      "device": {
+        "device": "MultipurposeSensor",
+        "status": "on",
+        "eventDate": "10/13/17 4:28:46 PM"
+      }
+    },
+    {
+      "policyNumber": "999999999",
+      "deviceId": "MultipurposeSensor",
+      "device": {
+        "device": "MultipurposeSensor",
+        "status": "on",
+        "eventDate": "10/13/17 4:28:48 PM"
+      }
+    },
+    {
+      "policyNumber": "999999999",
+      "deviceId": "MultipurposeSensor",
+      "device": {
+        "device": "MultipurposeSensor",
+        "status": "on",
+        "eventDate": "10/13/17 4:29:03 PM"
+      }
+    },
+    {
+      "policyNumber": "999999999",
+      "deviceId": "MultipurposeSensor",
+      "device": {
+        "device": "MultipurposeSensor",
+        "status": "close",
+        "eventDate": "10/13/17 4:29:35 PM"
+      }
+    },
+    {
+      "policyNumber": "999999999",
+      "deviceId": "MultipurposeSensor",
+      "device": {
+        "device": "MultipurposeSensor",
+        "status": "open",
+        "eventDate": "10/13/17 4:29:57 PM"
+      }
+    },
+    {
+      "policyNumber": "999999999",
+      "deviceId": "MultipurposeSensor",
+      "device": {
+        "device": "MultipurposeSensor",
+        "status": "close",
+        "eventDate": "10/13/17 4:29:59 PM"
+      }
+    },
+    {
+      "policyNumber": "999999999",
+      "deviceId": "Outlet",
+      "device": {
+        "device": "Outlet",
+        "status": "off",
+        "eventDate": "10/13/17 4:34:18 PM"
+      }
+    },
+    {
+      "policyNumber": "999999999",
+      "deviceId": "Outlet",
+      "device": {
+        "device": "Outlet",
+        "status": "on",
+        "eventDate": "10/13/17 4:35:44 PM"
+      }
+    },
+    {
+      "policyNumber": "999999999",
+      "deviceId": "Outlet",
+      "device": {
+        "device": "Outlet",
+        "status": "off",
+        "eventDate": "10/13/17 4:36:01 PM"
+      }
+    },
+    {
+      "policyNumber": "999999999",
+      "deviceId": "Outlet",
+      "device": {
+        "device": "Outlet",
+        "status": "on",
+        "eventDate": "10/13/17 4:43:49 PM"
+      }
+    },
+    {
+      "policyNumber": "999999999",
+      "deviceId": "Outlet",
+      "device": {
+        "device": "Outlet",
+        "status": "off",
+        "eventDate": "10/13/17 4:43:50 PM"
+      }
+    },
+    {
+      "policyNumber": "999999999",
+      "deviceId": "FortrezZSirenStrobeAlarm",
+      "device": {
+        "device": "FortrezZSirenStrobeAlarm",
+        "status": "Siren triggered",
+        "eventDate": "10/13/17 4:44:45 PM"
+      }
+    },
+    {
+      "policyNumber": "999999999",
+      "deviceId": "Outlet",
+      "device": {
+        "device": "Outlet",
+        "status": "on",
+        "eventDate": "10/13/17 4:44:45 PM"
+      }
+    },
+    {
+      "policyNumber": "999999999",
+      "deviceId": "Outlet",
+      "device": {
+        "device": "Outlet",
+        "status": "off",
+        "eventDate": "10/13/17 4:44:47 PM"
+      }
+    },
+    {
+      "policyNumber": "999999999",
+      "deviceId": "FortrezZSirenStrobeAlarm",
+      "device": {
+        "device": "FortrezZSirenStrobeAlarm",
+        "status": "Siren off",
+        "eventDate": "10/13/17 4:44:47 PM"
+      }
+    }
+  ]
+}
