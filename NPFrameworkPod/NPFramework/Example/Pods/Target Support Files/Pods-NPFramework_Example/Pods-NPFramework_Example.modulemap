@@ -1,0 +1,6 @@
+framework module Pods_NPFramework_Example {
+  umbrella header "Pods-NPFramework_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module NPFramework {
+  umbrella header "NPFramework-umbrella.h"
+
+  export *
+  module * { export * }
+}
