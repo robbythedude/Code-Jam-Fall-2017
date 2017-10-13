@@ -16,7 +16,7 @@ enum DeviceState {
 }
 
 protocol NPFrameWorkProtocol {
-    func getAllDevices(policyNumber: Int, completionBlock: @escaping ([String: Any]?) -> Void)
+    func getAllDevices(policyNumber: Int, completionBlock: @escaping ([String]?) -> Void)
     func getDevicState(deviceID: String) -> DeviceState
     func getDeviceEvents(deviceID: String) -> [DeviceEvent]
 }
@@ -29,20 +29,24 @@ class NPFrameWork : NPFrameWorkProtocol {
     
     init (){}
     
-    func getAllDevices(policyNumber: Int, completionBlock: @escaping ([String: Any]?) -> Void){
+    func getAllDevices(policyNumber: Int, completionBlock: @escaping ([String]?) -> Void){
         var builtURL = NPFrameWork.sharedInstance.endPointURL + policyNumber.description + "/devices"
         makeGetCall(builtURL: builtURL){
             (output) in
+            
+            var collectionOfNames: [String] = []
+            
             guard output != nil else {
+                completionBlock(nil)
                 return
             }
             
-            if let nestedDictionary = (output as AnyObject)["devices"] as? [[String: Any]] {
-                for dict in nestedDictionary {
-                    if let name = dict["name"] as? String {
-                        print(name)
-                    }
+            if let array = output as? [Any]{
+                for obj in array {
+                    var name = (obj as AnyObject)["name"] as! String
+                    collectionOfNames.append(name)
                 }
+                completionBlock(collectionOfNames)
             }
         }
     }
@@ -53,7 +57,7 @@ class NPFrameWork : NPFrameWorkProtocol {
         return [DeviceEvent.yes]
     }
     
-    private func makeGetCall(builtURL: String, completionBlock: @escaping ([String: Any]?) -> Void) {
+    private func makeGetCall(builtURL: String, completionBlock: @escaping (Any?) -> Void) {
         
         // Set up the URL request
         guard let url = URL(string: builtURL) else {
@@ -86,11 +90,12 @@ class NPFrameWork : NPFrameWorkProtocol {
             }
             // parse the result as JSON, since that's what the API provides
             do {
-                guard let jsonOBJ1 = try JSONSerialization.jsonObject(with: responseData, options:[]) as? [String: Any] else {
+                guard let jsonOBJ1 = try JSONSerialization.jsonObject(with: responseData, options:[]) as? Any else {
                     print("error trying to convert data to JSON")
                     completionBlock(nil)
                     return
                 }
+                print(jsonOBJ1)
                 completionBlock(jsonOBJ1)
                 
             } catch  {
