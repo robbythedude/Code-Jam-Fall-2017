@@ -12,6 +12,9 @@
 		D629C2391F9001CF00206DD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D629C2371F9001CF00206DD3 /* Main.storyboard */; };
 		D629C23B1F9001CF00206DD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D629C23A1F9001CF00206DD3 /* Assets.xcassets */; };
 		D629C23E1F9001CF00206DD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D629C23C1F9001CF00206DD3 /* LaunchScreen.storyboard */; };
+		D629C2481F90F0D500206DD3 /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D629C2471F90F0D500206DD3 /* DeviceTableViewCell.swift */; };
+		D629C24A1F9103BF00206DD3 /* DeviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D629C2491F9103BF00206DD3 /* DeviceTableViewController.swift */; };
+		D629C24C1F91055900206DD3 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = D629C24B1F91055900206DD3 /* Device.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		D629C23A1F9001CF00206DD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D629C23D1F9001CF00206DD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D629C23F1F9001CF00206DD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D629C2471F90F0D500206DD3 /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
+		D629C2491F9103BF00206DD3 /* DeviceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableViewController.swift; sourceTree = "<group>"; };
+		D629C24B1F91055900206DD3 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +62,10 @@
 			children = (
 				D629C2331F9001CF00206DD3 /* AppDelegate.swift */,
 				D629C2351F9001CF00206DD3 /* ViewController.swift */,
+				D629C2471F90F0D500206DD3 /* DeviceTableViewCell.swift */,
 				D629C2371F9001CF00206DD3 /* Main.storyboard */,
+				D629C2491F9103BF00206DD3 /* DeviceTableViewController.swift */,
+				D629C24B1F91055900206DD3 /* Device.swift */,
 				D629C23A1F9001CF00206DD3 /* Assets.xcassets */,
 				D629C23C1F9001CF00206DD3 /* LaunchScreen.storyboard */,
 				D629C23F1F9001CF00206DD3 /* Info.plist */,
@@ -137,7 +146,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D629C2361F9001CF00206DD3 /* ViewController.swift in Sources */,
+				D629C24A1F9103BF00206DD3 /* DeviceTableViewController.swift in Sources */,
+				D629C2481F90F0D500206DD3 /* DeviceTableViewCell.swift in Sources */,
 				D629C2341F9001CF00206DD3 /* AppDelegate.swift in Sources */,
+				D629C24C1F91055900206DD3 /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
